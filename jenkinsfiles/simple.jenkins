@@ -7,12 +7,16 @@ pipeline {
     stages {
         stage('Build a docker image') {
             steps {
-                sh 'docker build -t hello .' 
+                dir('docker') {
+                    sh 'docker build -t hello .' 
+                }
             }
         }
         stage('Run docker image') {
             steps {
-                sh 'docket run --rm hello'
+                dir('docker') {
+                    sh 'docket run --rm hello'
+                }
             }
         }
     }
