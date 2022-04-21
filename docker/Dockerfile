@@ -1,4 +1,2 @@
-FROM alpine
-CMD ["echo", "Hello Jenkins"]
-RUN docker build -t hello .
-RUN docker run --rm hello
+FROM python:3.7-alpine
+CMD ["python", "-c", "print('Hello from Jenkins')"]
