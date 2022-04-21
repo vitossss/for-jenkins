@@ -15,7 +15,7 @@ pipeline {
         stage('Run docker image') {
             steps {
                 dir('docker') {
-                    sh 'docket run --rm hello'
+                    sh 'docker run --rm hello'
                 }
             }
         }
