@@ -3,7 +3,7 @@
 properties([disableConcurrentBuilds()])
 
 pipeline {
-    agent { dockerfile true }
+    agent any
     stages {
         stage('Crate a docker image') {
             steps {
